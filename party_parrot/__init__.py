@@ -1,11 +1,9 @@
 from party_parrot.parrot_engine import ParrotLang
 
-_pl = ParrotLang()
+
+def to_parrot(string, encryption_key=1):
+    return ParrotLang(key=encryption_key).to_parrot(string)
 
 
-def to_parrot(string):
-    return _pl.to_parrot(string)
-
-
-def from_parrot(string):
-    return _pl.from_parrot(string)
+def from_parrot(string, encryption_key=1):
+    return ParrotLang(key=encryption_key).from_parrot(string)

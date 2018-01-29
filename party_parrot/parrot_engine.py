@@ -4,14 +4,17 @@
     ~~~~~~
 
 """
+import random
 from party_parrot._slack_parrots import parrots
 from string import ascii_lowercase as letters
 from party_parrot._utils import parrot_splitter
 
 
-
 class ParrotLang(object):
-    def __init__(self):
+    def __init__(self, key=1):
+        # Shuffle
+        random.seed(key)
+        random.shuffle(parrots)
         self._letter_par = {letter: par for letter, par in zip(letters, parrots)}
         self._par_letter = {v: k for k, v in self._letter_par.items()}
 
@@ -30,8 +33,3 @@ class ParrotLang(object):
 
     def from_parrot(self, string):
         return self._mapper(string, direction="reverse")
-
-
-
-
-
