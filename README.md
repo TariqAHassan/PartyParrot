@@ -1,5 +1,6 @@
-# PartyParrotLang
+# Party Parrot Language
 
+The future is Parrot. 
 
 ## Installation
 
