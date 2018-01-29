@@ -39,7 +39,7 @@ print(parrot)
 
 ```python
 # Wrong key:
-print(from_parrot(parrot, key=1))
+print(from_parrot(parrot))  # default key = 1.
 # xdzzv fvhzc!
 
 # Correct Key:
