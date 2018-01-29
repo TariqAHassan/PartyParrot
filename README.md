@@ -1,6 +1,6 @@
 # Party Parrot Language
 
-The future is Parrot. 
+The future is parrot. 
 
 ## Installation
 
