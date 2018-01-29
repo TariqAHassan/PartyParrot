@@ -10,7 +10,7 @@ The future is parrot.
 $ pip3 install git+git://github.com/TariqAHassan/PartyParrot@master
 ```
 
-## Usage
+## General Usage
 
 ```python
 from party_parrot import to_parrot, from_parrot
