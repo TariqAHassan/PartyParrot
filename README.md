@@ -1,8 +1,8 @@
 # Party Parrot Language
 
-The future is parrot. 
-
 ![Parrot](http://cultofthepartyparrot.com/parrots/hd/parrot.gif)
+
+The future is parrot. 
 
 ## Installation
 
