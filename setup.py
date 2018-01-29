@@ -18,7 +18,7 @@ setup(
     long_description=read('docs/README.md'),
     license='BSD',
     keywords='Party Parrot',
-    url='https://github.com/TariqAHassan/PartyParrotLang.git',
+    url='https://github.com/TariqAHassan/PartyParrot.git',
     download_url='https://github.com/TariqAHassan/PartyParrot/archive/v0.1.tar.gz',
     packages=find_packages(),
     install_requires=['sklearn', 'pyperclip'],
