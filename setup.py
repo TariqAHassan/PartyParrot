@@ -20,6 +20,7 @@ setup(
     keywords='Party Parrot',
     url='https://github.com/TariqAHassan/PartyParrotLang.git',
     download_url='https://github.com/TariqAHassan/PartyParrot/archive/v0.1.tar.gz',
+    packages=find_packages(),
     install_requires=['sklearn', 'pyperclip'],
     classifiers=['Development Status :: 3 - Alpha',
                  'Natural Language :: English',
