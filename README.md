@@ -19,7 +19,7 @@ from party_parrot import to_parrot, from_parrot
 ```python
 parrot = to_parrot("hello world!")
 print(parrot)
-# :conga_parrot::christmas_parrot::fieri_parrot::fieri_parrot::parrot_dad: :twins_parrot::parrot_dad::sad_parrot::fieri_parrot::chill_parrot:!
+# :triplets_parrot::witness_protection_parrot::confused_parrot::confused_parrot::conga_parrot: :deal_with_it_parrot::conga_parrot::popcorn_parrot::confused_parrot::chill_parrot:!
 ```
 
 ### From Parrot:
@@ -27,4 +27,22 @@ print(parrot)
 ```python
 print(from_parrot(parrot))
 # hello world!
+```
+
+### Secret Parrot Messages
+
+```python
+parrot = to_parrot("hello world!", key=88)
+print(parrot)
+# :blonde_sassy_parrot::parrot_dad::bored_parrot::bored_parrot::goth_parrot: :coffee_parrot::goth_parrot::margarita_parrot::bored_parrot::ship_it_parrot:!
+```
+
+```python
+# Wrong key:
+print(from_parrot(parrot, key=1))
+# xdzzv fvhzc!
+
+# Correct Key:
+print(from_parrot(parrot, key=88))
+# Hello World
 ```
