@@ -29,7 +29,7 @@ print(from_parrot(parrot))
 # hello world!
 ```
 
-### Secret Parrot Messages
+## Secret Parrot Messages
 
 ```python
 parrot = to_parrot("hello world!", key=88)
