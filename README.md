@@ -2,6 +2,8 @@
 
 The future is parrot. 
 
+![Parrot](http://cultofthepartyparrot.com/parrots/hd/parrot.gif)
+
 ## Installation
 
 ```bash
