@@ -25,7 +25,7 @@ print(parrot)
 ```
 
 We can use `copy=True` to copy the output to our clipboard, so we can simply
-paste the output with `Command + V` on Mac or `Control + V` on Windows.
+paste the output elsewhere with `Command + V` on Mac or `Control + V` on Windows.
 
 ### From Parrot:
 
