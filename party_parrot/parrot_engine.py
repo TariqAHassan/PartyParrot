@@ -11,9 +11,9 @@ from party_parrot._utils import parrot_splitter
 
 
 class ParrotLang(object):
-    def __init__(self, key=1):
+    def __init__(self, encryption_key=1):
         # Shuffle
-        random.seed(key)
+        random.seed(encryption_key)
         random.shuffle(parrots)
         self._letter_par = {letter: par for letter, par in zip(letters, parrots)}
         self._par_letter = {v: k for k, v in self._letter_par.items()}
