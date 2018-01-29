@@ -4,6 +4,7 @@
     ~~~~~~
 
 """
+import pyperclip
 from sklearn.utils import shuffle
 from string import ascii_lowercase as letters
 from party_parrot._utils import parrot_splitter
@@ -23,14 +24,17 @@ class ParrotLang(object):
         d = self._letter_par if direction == 'forward' else self._par_letter
         return d[key] if key in d else key
 
-    def _mapper(self, string, direction):
+    def _mapper(self, string, direction, copy=False):
         string = string.lower()
         to_map = string if direction == 'forward' else parrot_splitter(string)
         mapped = map(lambda key: self._get(key, direction=direction), to_map)
-        return "".join(mapped)
+        out = "".join(mapped)
+        if copy:
+            pyperclip.copy(out)
+        return out
 
-    def to_parrot(self, string):
-        return self._mapper(string, direction="forward")
+    def to_parrot(self, string, copy=False):
+        return self._mapper(string, direction="forward", copy=copy)
 
-    def from_parrot(self, string):
-        return self._mapper(string, direction="reverse")
+    def from_parrot(self, string, copy=False):
+        return self._mapper(string, direction="reverse", copy=copy)

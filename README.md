@@ -19,10 +19,13 @@ from party_parrot import to_parrot, from_parrot
 ### To Parrot:
 
 ```python
-parrot = to_parrot("hello world!")
+parrot = to_parrot("hello world!", copy=True)
 print(parrot)
 # :triplets_parrot::witness_protection_parrot::confused_parrot::confused_parrot::conga_parrot: :deal_with_it_parrot::conga_parrot::popcorn_parrot::confused_parrot::chill_parrot:!
 ```
+
+> We can use `copy=True` to copy the output to out clipboard, so we can simply
+> paste the output with `Command + V` on Mac or `Control + V` on Windows.
 
 ### From Parrot:
 
