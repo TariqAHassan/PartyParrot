@@ -6,35 +6,40 @@
 """
 import pyperclip
 from sklearn.utils import shuffle
-from string import ascii_lowercase as letters
-from party_parrot._utils import parrot_splitter
+from string import ascii_lowercase as chars
+from party_parrot._slack_parrots import parrots
+from party_parrot._utils import dict_str_replace
 
 
 class ParrotLang(object):
-    def __init__(self, encryption_key=1):
-        # Shuffle
-        from party_parrot._slack_parrots import parrots
-        parrots = shuffle(parrots, random_state=encryption_key)
+    def __init__(self):
+        self._dicts = dict()
 
-        # Look up dicts
-        self._letter_par = {letter: par for letter, par in zip(letters, parrots)}
-        self._par_letter = {v: k for k, v in self._letter_par.items()}
+    def _get_dict(self, encryption_key):
+        if encryption_key not in self._dicts:
+            self._dicts = dict()  # reset to constrain memory load.
+            parrots_shuf = shuffle(parrots, random_state=encryption_key)
+            parrot_dict = {char: par for char, par in zip(chars, parrots_shuf)}
+            self._dicts[encryption_key] = parrot_dict
+        return self._dicts[encryption_key]
 
-    def _get(self, key, direction):
-        d = self._letter_par if direction == 'forward' else self._par_letter
-        return d[key] if key in d else key
+    def _mapper(self, string, direction, key, copy):
+        if not isinstance(key, int):
+            raise TypeError("`key` must be an integer.")
 
-    def _mapper(self, string, direction, copy=False):
         string = string.lower()
-        to_map = string if direction == 'forward' else parrot_splitter(string)
-        mapped = map(lambda key: self._get(key, direction=direction), to_map)
-        out = "".join(mapped)
+        d = self._get_dict(encryption_key=key)
+        if direction == "forward":
+            out = "".join(map(lambda key: d.get(key, key), string))
+        else:
+            out = dict_str_replace(string, d=d, swap_key_value=True)
+
         if copy:
             pyperclip.copy(out)
         return out
 
-    def to_parrot(self, string, copy=False):
-        return self._mapper(string, direction="forward", copy=copy)
+    def to_parrot(self, string, key=1, copy=False):
+        return self._mapper(string, direction="forward", key=key, copy=copy)
 
-    def from_parrot(self, string, copy=False):
-        return self._mapper(string, direction="reverse", copy=copy)
+    def from_parrot(self, string, key=1, copy=False):
+        return self._mapper(string, direction="reverse", key=key, copy=copy)
