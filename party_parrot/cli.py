@@ -30,9 +30,9 @@ def main():
         parrots_dict = _pl._dicts.get(tuple(_pl._dicts.keys())[0])
         # Use a generator to try and avoid the worse running time.
         if any((p in args.string for p in parrots_dict.values())):
-            direction == 'reverse'
+            direction = 'reverse'
         else:
-            direction == 'forward'
+            direction = 'forward'
     else:
         raise ValueError("--dir must be one of:"
                          "'to', 'from', 'auto'.")
