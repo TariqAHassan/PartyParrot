@@ -13,10 +13,11 @@ def main():
     parser = argparse.ArgumentParser(description='parrot')
     parser.add_argument('string', type=str, help='String to convert.')
     parser.add_argument('--dir', type=str, default='auto',
-                        help="Direction. One of: 'to', 'from', 'auto'."
+                        help="Direction. One of: 'to', 'from', 'auto'. "
                              "Defaults to 'auto' [detection].")
     parser.add_argument('--copy', type=bool, default=None,
-                        help='If True, copy output to clipboard')
+                        help="If True, copy output to clipboard. "
+                             "Defaults to True if 'to', False if 'from'.")
     parser.add_argument('--key', type=int, default=1,
                         help='Key to use. Defaults to 1.')
     args = parser.parse_args()
