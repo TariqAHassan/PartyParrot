@@ -6,12 +6,11 @@
 """
 import sys
 import argparse
-from pprint import pprint
 from party_parrot import _pl
 
 
 def main():
-    parser = argparse.ArgumentParser(description='party_parrot')
+    parser = argparse.ArgumentParser(description='parrot')
     parser.add_argument('string', type=str, help='String to convert.')
     parser.add_argument('--dir', type=str, default='auto',
                         help="Direction. One of: 'to', 'from', 'auto'."
@@ -49,6 +48,6 @@ def main():
                          key=args.key, copy=copy)
 
     # Display Output
-    pprint(output)
+    print(output)
 
     sys.exit()
