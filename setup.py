@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name='party_parrot',
-    version='0.1',
+    version='0.2.0',
     author='Tariq A. Hassan',
     author_email='laterallattice@gmail.com',
     description='The future is parrot.',
@@ -19,7 +19,7 @@ setup(
     license='BSD',
     keywords='Party Parrot',
     url='https://github.com/TariqAHassan/PartyParrot.git',
-    download_url='https://github.com/TariqAHassan/PartyParrot/archive/v0.1.tar.gz',
+    download_url='https://github.com/TariqAHassan/PartyParrot/archive/v0.2.0.tar.gz',
     packages=find_packages(),
     entry_points={
         "console_scripts": ['parrot = party_parrot.cli:main']
