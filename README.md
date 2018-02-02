@@ -57,7 +57,7 @@ print(from_parrot(parrot, key=88))
 ### To Parrot:
 
 ```bash
-parrot "hi"
+$ parrot "hi"
 # :slow_parrot::christmas_parrot:
 ```
 
@@ -67,7 +67,7 @@ Note: special characters, such as `!`, have to be escaped with a backslash when 
 ### From Parrot:
 
 ```bash
-parrot :slow_parrot::christmas_parrot:
+$ parrot :slow_parrot::christmas_parrot:
 # hi
 ```
 
