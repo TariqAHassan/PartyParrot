@@ -57,7 +57,7 @@ print(from_parrot(parrot, key=88))
 ### To Parrot:
 
 ```bash
-$ parrot "hi"
+$ parrot 'hi'
 # :slow_parrot::christmas_parrot:
 ```
 
