@@ -71,7 +71,7 @@ $ parrot :slow_parrot::christmas_parrot:
 # hi
 ```
 
-### CLI Help
+### CLI Documentation
 
 ```bash
 parrot -h
