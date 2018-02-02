@@ -14,13 +14,16 @@ setup(
     version='0.1',
     author='Tariq A. Hassan',
     author_email='laterallattice@gmail.com',
-    description=('The future is parrot.'),
+    description='The future is parrot.',
     long_description=read('docs/README.md'),
     license='BSD',
     keywords='Party Parrot',
     url='https://github.com/TariqAHassan/PartyParrot.git',
     download_url='https://github.com/TariqAHassan/PartyParrot/archive/v0.1.tar.gz',
     packages=find_packages(),
+    entry_points={
+        "console_scripts": ['party_parrot = party_parrot.cli:main']
+    },
     install_requires=['sklearn', 'pyperclip'],
     classifiers=['Development Status :: 3 - Alpha',
                  'Natural Language :: English',
