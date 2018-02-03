@@ -9,8 +9,8 @@ import sys
 import unittest
 
 # Allow access to modules
-# sys.path.insert(0, os.path.abspath("."))
-# sys.path.insert(0, os.path.abspath("../"))
+sys.path.insert(0, os.path.abspath("."))
+sys.path.insert(0, os.path.abspath("../"))
 
 from party_parrot import to_parrot, from_parrot
 
