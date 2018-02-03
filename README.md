@@ -74,7 +74,8 @@ $ parrot ":slow_parrot::christmas_parrot:"
 ### CLI Documentation
 
 ```bash
-parrot -h
+$ parrot -h
+
 usage: parrot [-h] [--dir DIR] [--copy COPY] [--key KEY] string
 
 parrot
