@@ -13,9 +13,8 @@ from party_parrot._utils import dict_str_replace
 
 class ParrotLang(object):
     def __init__(self):
-        self._dicts = dict()
         self._default_key = 1
-        _ = self._get_dict(encryption_key=self._default_key)
+        self._dicts = self._get_dict(self._default_key)
 
     def _get_dict(self, encryption_key):
         if encryption_key not in self._dicts:
