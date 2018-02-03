@@ -11,7 +11,7 @@ def read(fname):
 
 setup(
     name='party_parrot',
-    version='0.2.0',
+    version='0.2.1',
     author='Tariq A. Hassan',
     author_email='laterallattice@gmail.com',
     description='The future is parrot.',
