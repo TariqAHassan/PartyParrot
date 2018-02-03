@@ -17,7 +17,7 @@ class ParrotLang(object):
         self._dicts = self._get_dict(self._default_key)
 
     def _get_dict(self, encryption_key):
-        if encryption_key not in self._dicts:
+        if not hasattr(self, '_dicts') or encryption_key not in self._dicts:
             self._dicts = dict()  # reset to constrain memory load.
             parrots_shuf = shuffle(parrots, random_state=encryption_key)
             parrot_dict = {char: par for char, par in zip(chars, parrots_shuf)}
