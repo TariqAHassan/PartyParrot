@@ -15,7 +15,7 @@ class ParrotLang(object):
     def __init__(self):
         self._dicts = dict()
         self._default_key = 1
-        self._get_dict(encryption_key=self._default_key)
+        _ = self._get_dict(encryption_key=self._default_key)
 
     def _get_dict(self, encryption_key):
         if encryption_key not in self._dicts:
