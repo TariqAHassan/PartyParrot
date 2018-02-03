@@ -34,7 +34,7 @@ def main():
         else:
             direction = 'forward'
     else:
-        raise ValueError("--dir must be one of:"
+        raise ValueError("--dir must be one of: "
                          "'to', 'from', 'auto'.")
 
     if args.copy is None:
