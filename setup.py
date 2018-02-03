@@ -24,7 +24,7 @@ setup(
     entry_points={
         "console_scripts": ['parrot = party_parrot.cli:main']
     },
-    install_requires=['sklearn', 'pyperclip'],
+    install_requires=['sklearn', 'scipy', 'pyperclip'],
     classifiers=['Development Status :: 3 - Alpha',
                  'Natural Language :: English',
                  'Intended Audience :: Science/Research',

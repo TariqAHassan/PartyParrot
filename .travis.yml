@@ -4,7 +4,7 @@ python:
   - "3.6"
 cache: pip3
 install:
-  - "pip install sklearn pyperclip"
+  - "pip install sklearn scipy pyperclip"
 script:
   - python -W"ignore" tests/conversion.py
 os: "linux"
