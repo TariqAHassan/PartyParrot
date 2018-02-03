@@ -26,11 +26,10 @@ class ParrotLang(object):
         return self._dicts[encryption_key]
 
     def _mapper(self, string, direction, key, copy):
-        if not isinstance(key, int):
-            raise TypeError("`key` must be an integer.")
-
         if key is None:
             key = self._default_key
+        elif not isinstance(key, int):
+            raise TypeError("`key` must be an integer.")
 
         string = string.lower()
         d = self._get_dict(encryption_key=key)
